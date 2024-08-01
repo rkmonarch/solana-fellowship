@@ -1,12 +1,14 @@
+import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
-      <div className="fixed bg-white z-10 w-full">
+    <div className="bg-white min-h-screen">
+      <div className="fixed top-0 left-0 right-0 z-10">
         <Navbar />
+        <Hero />
       </div>
+      <div className="pt-16"></div>
     </div>
   );
 }

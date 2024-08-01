@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Layout from "@/components/layout";
 import Providers from "@/providers";
+import ToastProvider from "@/providers/ToastProvider";
 
 export const metadata: Metadata = {
   title: "Solana Fellowship - rkmonarch",
@@ -17,7 +18,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Providers>
-          <Layout>{children}</Layout>
+          <ToastProvider>
+            <Layout>{children}</Layout>
+          </ToastProvider>
         </Providers>
       </body>
     </html>
